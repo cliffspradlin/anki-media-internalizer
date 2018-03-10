@@ -41,7 +41,7 @@ def retrieveURL(mw, url):
     return mw.col.media.writeData(unicode(fname), filecontents)
 
 
-def internailzeMedia(self, did):
+def internalizeMedia(self, did):
     """Search http-referenced resources in notes, download them into local storage and change the references."""
     if DeckBrowser.internailze_ask_backup and not askUser("Have you backed up your collection and media folder?"):
         return
@@ -89,4 +89,4 @@ def internailzeMedia(self, did):
 
 DeckBrowser.internailze_ask_backup = True
 DeckBrowser._showOptions = myShowOptions
-DeckBrowser._internalize = internailzeMedia
+DeckBrowser._internalize = internalizeMedia
